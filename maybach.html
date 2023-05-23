@@ -1,0 +1,314 @@
+
+<html>
+<head>
+<title>payment</title>
+<link rel="stylesheet" type="text/css" href="styling.css">
+
+<script type="text/javascript">
+
+function validate() {
+
+var txt = document.getElementById("name1");
+
+if(txt.value== "" || txt.value== null ) {
+
+
+alert("Please enter name to proceed");
+
+txt.style.border = "2px solid red";
+
+return false;
+
+} 
+
+var a = 0, rdbtn=document.getElementsByName("gender")
+
+for(i=0;i<rdbtn.length;i++) {
+
+if(rdbtn.item(i).checked == false) {
+
+a++;
+
+}
+
+}
+
+if(a == rdbtn.length) {
+
+alert("Please select your gender");
+
+
+
+return false;
+
+}
+
+var combo1 = document.getElementById("option")
+
+if(combo1.value == null || combo1.value == "") {
+
+alert("Please select your city");
+
+return false;
+
+}
+var num = document.getElementById("num")
+
+if( num.value == "" || isNaN( num.value ) || num.value.length != 11 ) {
+
+alert("Please enter your correct mobile number");
+num.style.border = "2px solid red";
+return false;
+
+}
+
+var adr = document.getElementById("address");
+
+if(adr.value== "" || adr.value== null ) {
+
+
+alert("Please enter your address");
+
+adr.style.border = "2px solid red";
+
+return false;
+
+} 
+
+var zip = document.getElementById("zip")
+
+if( zip.value == "" || isNaN( zip.value ) || zip.value.length != 5 ) {
+
+alert("Please select zip code #####");
+
+return false;
+
+}
+
+var state = document.getElementById("state");
+
+if(state.value== "" || state.value== null ) {
+
+
+alert("Please enter state");
+
+state.style.border = "2px solid red";
+
+return false;
+
+} 
+var Cnumber = document.getElementById("Cnumber")
+
+if( Cnumber.value == "" || isNaN( Cnumber.value ) || Cnumber.value.length != 5 ) {
+
+alert("Please select card number #####");
+
+return false;
+
+}
+var cardholdername = document.getElementById("cardholdername");
+
+if(cardholdername.value== "" || cardholdername.value== null ) {
+
+
+alert("Please enter your card holder name");
+
+cardholdername.style.border = "2px solid red";
+
+return false;
+
+} 
+
+return true;
+}
+</script>
+<style>
+body
+{ margin:0;
+}
+
+	input[type=text], select {
+  width: 500px;
+  padding: 15px 20px ;
+  margin: 20px 0px 0px 230;
+  display: inline-block;
+  border: 6px solid #black;
+  border-radius: 4px;
+    
+  }
+input[type=submit] {
+  width: 500px;
+  background-color: #4682B4;
+  color: white;
+  padding: 14px 20px;
+  margin: 20px 0px 0px 230;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type=radio] {
+
+ 
+  margin: 20px 0px 0px 230;
+
+
+  cursor: pointer;
+}
+
+#option{
+width: 500px;
+  padding: 15px 20px ;
+  margin: 20px 0px 0px 230;
+  display: inline-block;
+  border: 6px solid #black;
+  border-radius: 4px;
+}
+
+input[type=submit]:hover {
+  background-color:   #2a526f;
+}
+h1{color: white;
+text-align: center; font-size:30;}
+
+
+</style>
+</head>
+<body>
+
+<table border=0 width=1519 cellspacing=0 height=200 bgcolor="black">
+<tr height=120 bgcolor="343232" border=0>
+<td colspan=6  >
+
+
+<img src="logo4.png" width="80" height="80" style="margin-left: 742px; padding-top:20px; padding-bottom:20px;"> 
+
+ </td>
+ 
+ </tr>
+ <tr height=10 ><td bgcolor="white"></td></tr>
+
+
+<tr height=45 bgcolor="343232" border=0>
+<td colspan=6 >
+
+
+<ul >
+  <li id="para1" style="margin-right:80px;"><a href="contact.html"><i>Contact Us </a></li></i>
+  <li id="para1" style="margin-right:80px;"><a href="sell.html"><i>Sell</a></li></i>
+   <li id="para1" style="margin-right:80px;"><a href="buy.html"><i>Buy</a></li></i>
+   <li id="para1" style="margin-right:80px;"><a href="design.html"><i>Design</a></li></i>
+    <li id="para1" style="margin-right:80px;"><a href="vehical.html"><i>Vehicle</a></li></i>
+  <li id="para1" style="margin-right:80px;"><a href= "home.html" ><i>Home</a></li></i>
+ 
+ 
+
+ 
+</ul>
+
+</td>
+</tr>
+ <tr height=10 ></tr>
+<tr height=600 >
+
+
+<td height=600 bgcolor="black">
+<video width="100%" height="600" controls loop controls autoplay>
+<source src="maybach.mp4" type="video/mp4">
+</video>
+</td>
+
+
+</tr>
+ <tr height=20  > <td bgcolor="black"></td></tr>
+
+<tr height=800 >
+<td colspan=3 >
+
+<table border=0 width=1517 cellspacing=0 height=1000 bgcolor="black">
+<td width="20%" >
+ <img src="img.png" width="100%" height="100%">
+</td>
+
+<td width="65%" style=" border:10px solid BABDBF; " bgcolor="BABDBF" >
+<form onsubmit="return validate()">
+<br><br><br>
+<font style=" margin-left:200px; font-size:30;" color=black><b>Fill up the form:</b></font><br>
+
+<input type="text" name="name1" id="name1" placeholder="Full Name"  maxlength=25 ><br><br>
+<label style=" margin-left:230px; font-size:21;" ><b>Gender:</b></label ><br>
+<input  type="radio" name="gender" value="male"><label   style=" margin-left:12px;"><b>Male</b></label><br>
+
+<input type="radio" name="gender" value="female"> <label  style=" margin-left:9px;"><b>Female </b></label><br>
+
+<input   type="radio" name="gender" value="others"><label style=" margin-left:13px;"><b>Other </b></label> <br> 
+
+<input type="text" name="email" id="email" placeholder="Email" ><br>
+<input type="text" name="mobile" id="num" placeholder="Mobile Number" ><br>
+<input type="text" name="address" id="address" placeholder="Address" ><br>
+
+
+<select  id="option" name="city"  size=1  style="width:250;">
+<option value="">Choose a city</option>
+<option value="dhaka">Dhaka
+<option value="Chittagong">Chittagong
+<option value="Sylhet">Sylhet
+</select><br>
+
+<input type="text" name="state" id="state" placeholder="State" style="width:150;"> 
+<input type="text" name="zip" id="zip" placeholder="Zip" style="width:100; margin-left:0;"><br><br><br><br>
+
+<font style=" margin-left:200px; font-size:30;" color=black><b>Payment:</b></font><br>
+<input type="text" name="number" id="Cnumber"placeholder="Enter Card Number"><br>
+<input type="text" name="monthyear" placeholder="MM/YEAR" style="width:150;"><br>
+<input type="text" name="cardholdername"  id="cardholdername" placeholder="Card Holder Name" ><br><br>
+
+
+
+<input type="submit" value="Confirm Payment"><br><br>
+
+
+
+ 
+
+</form>
+</td>
+
+<td width="20%">
+ <img src="img3.png" width="100%" height="100%">
+</td>
+</table>
+</td>
+</tr>
+<tr height=20  > <td bgcolor="black"></td></tr>
+
+<tr height=350 width="1519" bgcolor="black" >
+<td colspan=6 style="border-style: groove; border: 20px solid black; border-radius: 8px;">
+<br><br>
+<font align=center style="font-size:15"><h1 id="para2" ><i><b>Stay connected with Buyy & Sell.</h1></font></i></b><br>
+
+<br><br>
+<center>
+<a href="https://www.facebook.com/asma.mozaffar.5"><img src="fbb.png" width="40" height="40"></a>
+                
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<a href="https://www.instagram.com/asma_mozaffar/"><img src="insta.png" width="40" height="40"></a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+		<a href="https://twitter.com/"><img src="twitter.png" width="40" height="40"></a>
+	
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+		<a href="https://www.youtube.com/user/Subaru/videos"><img src="youtube.png" width="40" height="40"></a></center>
+		
+		<br><br>
+		<a href= "maybach.html" style="padding-left:1370px; color:white; font-size:20;"><i>Back to top</a></li></i>
+<br><br>
+</td>
+</tr>
+
+</table>
+</body>
+</html>

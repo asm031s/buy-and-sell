@@ -1,0 +1,57 @@
+#para2{
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px #888888;
+}
+
+#border{
+	width:400;
+  border: 1px solid;
+  padding: 50px;
+  margin: 10px 0px 10px 40px;
+  box-shadow: 15px 20px #888888;
+}
+
+
+ul {
+  list-style-type: none;
+  
+
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  
+
+}
+
+#para1 {
+	 font-size:23;
+  float: right;
+  border-left:1px solid #bbb;
+}
+
+#para1  a {
+ 
+  color: white;
+  text-align: center;
+  padding: 3px 15px 0px 30px;
+  text-decoration: none;
+  margin-right:50px;
+
+}
+
+#para1  a:hover {
+  background-color: #111;
+}
+
+
+
+#para1:last-child {
+  border-left: none;
+}
+
+
+
+

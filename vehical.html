@@ -1,0 +1,705 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="styling.css">
+<script type="text/javascript">
+function Maybach() {
+const Mercedes_Maybach = { name:"Mercedes Maybach", price:"19,01,990", model:"269", color:"white"};
+
+document.getElementById("demo").innerHTML = "<b>"+Mercedes_Maybach.name+"</b>"+"<br>"+"<br>"+"<b>"+"Model no:"+" "+
+Mercedes_Maybach.model+"</b>"  
+ 
+ document.getElementById("p1").innerHTML = "<br>" +"<b>"+"Price:"+" "+
+ Mercedes_Maybach.price +"tk" +"</b>"+"<br>";
+ 
+ 
+
+const cla = { name:"CLA", price:"22,46,590", model:"392", color:"white"};
+
+document.getElementById("demo1").innerHTML = "<b>"+cla.name+"</b>"+"<br>"+"<br>"+"<b>"+"Model no:"+" "+cla.model+"</b>"  
+ 
+ document.getElementById("p2").innerHTML = "<br>" +"<b>"+"Price:"+" "+
+ cla.price +"tk" +"</b>"+"<br>";
+
+
+
+const eqa = { name:"EQA", price:"18,01,949", model:"483", color:"white"};
+
+document.getElementById("demo2").innerHTML = "<b>"+eqa.name+"</b>"+"<br>"+"<br>"+"<b>"+"   "+"Model no:"+" "+eqa.model+"</b>"  
+ 
+ document.getElementById("p3").innerHTML = "<br>" +"<b>"+"Price:"+" "+
+ eqa.price +"tk" +"</b>"+"<br>";
+ 
+ 
+ const cls = { name:"CLS", price:"19,01,990 ", model:"2856", color:"white"};
+
+document.getElementById("demo3").innerHTML = "<b>"+cls.name+"</b>"+"<br>"+"<br>"+"<b>"+"   "+"Model no:"+" "+cls.model+"</b>"  
+ 
+ document.getElementById("p4").innerHTML = "<br>" +"<b>"+"Price:"+" "+
+ cls.price +"tk" +"</b>"+"<br>";
+ 
+
+
+ 
+
+ 
+  const gclass = { name:"G-CLASS", price:"22,01,990 tk", model:"5932", color:"white"};
+
+document.getElementById("demo4").innerHTML = "<b>"+gclass.name+"</b>"+"<br>"+"<br>"+"<b>"+"   "+"Model no:"+" "+
+gclass.model+"</b>"  
+ 
+ document.getElementById("p5").innerHTML = "<br>" +"<b>"+"Price:"+" "+
+ gclass.price +"tk" +"</b>"+"<br>";
+ 
+ const eqv = { name:"EQV", price:"15,01,990", model:"700", color:"white"};
+
+document.getElementById("demo5").innerHTML = "<b>"+eqv.name+"</b>"+"<br>"+"<br>"+"<b>"+"   "+"Model no:"+" "+eqv.model+"</b>"  
+ 
+ document.getElementById("p6").innerHTML = "<br>" +"<b>"+"Price:"+" "+
+ eqv.price +"tk" +"</b>"+"<br>";
+ 
+ 
+ const sl = { name:"SL", price:"11,01,940", model:"2021", color:"white"};
+
+document.getElementById("demo6").innerHTML = "<b>"+sl.name+"</b>"+"<br>"+"<br>"+"<b>"+"   "+"Model no:"+" "+
+sl.model+"</b>"  
+ 
+ document.getElementById("p7").innerHTML = "<br>" +"<b>"+"Price:"+" "+
+ sl.price +"tk" +"</b>"+"<br>";
+ 
+ 
+ 
+
+const amg = { name:"AMG GT", price:"19,01,990", model:"123", color:"white"};
+
+document.getElementById("demo7").innerHTML = "<b>"+amg.name+"</b>"+"<br>"+"<br>"+"<b>"+"   "+"Model no:"+" "+
+amg.model+"</b>"  
+ 
+ document.getElementById("p8").innerHTML = "<br>" +"<b>"+"Price:"+" "+
+ amg.price +"tk" +"</b>"+"<br>";
+
+}
+function validate() {
+var a = 0, chk=document.getElementsByName("size")
+var total = 0;
+for(i=0;i<chk.length;i++) {
+
+if(chk.item(i).checked == false) {
+
+a++;
+
+}
+
+}
+
+if(a == chk.length) {
+
+alert("Please select a car to add in cart");
+
+return false;
+
+}
+
+
+var txt = document.getElementById("name1");
+
+if(txt.value.length<=2||txt.value.length>5||txt.value== "" || txt.value== null ) {
+
+
+alert("Please enter name to proceed");
+
+txt.style.border = "2px solid red";
+
+return false;
+
+} 
+
+
+
+var a = 0, rdbtn=document.getElementsByName("gender")
+
+for(i=0;i<rdbtn.length;i++) {
+
+if(rdbtn.item(i).checked == false) {
+
+a++;
+
+}
+
+}
+
+if(a == rdbtn.length) {
+
+alert("Please select your gender");
+
+
+
+return false;
+
+}
+var eml = document.getElementById("email");
+
+if(eml.value== "" || eml.value== null ||eml.value.indexOf('@') <= 0 ||(eml.value.charAt(eml.value.length-4)!='.') && (eml.value.charAt(eml.value.length-3)!='.') ) {
+
+
+alert("Please enter email to proceed");
+
+eml.style.border = "2px solid red";
+
+return false;
+
+} 
+
+var num = document.getElementById("num")
+
+if( num.value == "" || isNaN( num.value ) || num.value.length != 11 ) {
+
+alert("Please enter your correct mobile number");
+num.style.border = "2px solid red";
+return false;
+
+}
+var adr = document.getElementById("address");
+
+if(adr.value== "" || adr.value== null ) {
+
+
+alert("Please enter your address");
+
+adr.style.border = "2px solid red";
+
+return false;
+
+}
+var combo1 = document.getElementById("option")
+
+if(combo1.value == null || combo1.value == "") {
+
+alert("Please select your city");
+
+return false;
+
+}
+
+
+ var state = document.getElementById("state");
+
+if(state.value== "" || state.value== null ) {
+
+
+alert("Please enter state");
+
+state.style.border = "2px solid red";
+
+return false;
+
+}
+
+var zip = document.getElementById("zip")
+
+if( zip.value == "" || isNaN( zip.value ) || zip.value.length != 5 ) {
+
+alert("Please select zip code #####");
+
+return false;
+
+}
+
+ 
+var Cnumber = document.getElementById("Cnumber")
+
+if( Cnumber.value == "" || isNaN( Cnumber.value ) || Cnumber.value.length != 5 ) {
+
+alert("Please select card number #####");
+
+return false;
+
+}
+
+
+var monthyear = document.getElementById("monthyear");
+
+if(monthyear.value== "" || monthyear.value== null  ||monthyear.value.indexOf('/') <= 0  ) {
+
+
+alert("Please enter your MM/YY");
+
+monthyear.style.border = "2px solid red";
+
+return false;
+
+}
+ 
+
+var cardholdername = document.getElementById("cardholdername");
+
+if(cardholdername.value== "" || cardholdername.value== null ) {
+
+
+alert("Please enter your card holder name");
+
+cardholdername.style.border = "2px solid red";
+
+return false;
+
+} return true;
+
+
+}
+var total_price=0;
+
+function addPrice(checkbox){
+ var price=parseFloat(checkbox.value);
+ if(checkbox.checked == true){
+      
+       total_price+=price;
+       
+    }else{
+     total_price-=price;
+   }
+      document.getElementById("tp").innerHTML=total_price + " "+"tk";
+}
+</script>
+
+
+<style>
+body{margin:0;}
+#image{
+
+padding: 0px 60px;
+width:230px; height:150px;
+
+}
+.button {
+  
+  padding: 10px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+
+  color: black;
+  background-color: white;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+.but {
+  
+  padding: 10px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  
+  color: black;
+  background-color: white;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+.button:hover {background-color: gray}
+.but:hover {background-color: #00b300}
+
+.price{
+padding-left:60px;
+
+
+}
+input[type=text], select {
+  width: 500px;
+  padding: 15px 20px ;
+  margin: 20px 0px 0px 230;
+  display: inline-block;
+  border: 6px solid #black;
+  border-radius: 4px;
+    
+  }
+input[type=submit] {
+  width: 500px;
+  background-color: #4682B4;
+  color: white;
+  padding: 14px 20px;
+  margin: 20px 0px 0px 230;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type=radio] {
+
+ 
+  margin: 20px 0px 0px 230;
+
+
+  cursor: pointer;
+}
+
+#option{
+width: 500px;
+  padding: 15px 20px ;
+  margin: 20px 0px 0px 230;
+  display: inline-block;
+  border: 6px solid #black;
+  border-radius: 4px;
+}
+
+input[type=submit]:hover {
+  background-color:   #2a526f;
+}
+h1{color: white;
+text-align: center; font-size:30;}
+</style>
+</head>
+<body onload="Maybach()">
+
+<table border=0 width=1519 height=900 cellspacing=0 bgcolor="black">
+
+<tr height=120 bgcolor="343232" border=0>
+<td colspan=6  >
+
+
+<img src="logo4.png" width="80" height="80" style="margin-left: 742px; padding-top:20px; padding-bottom:20px;"> 
+
+ </td>
+ 
+ </tr>
+ <tr height=10 ><td bgcolor="white"></td></tr>
+
+
+<tr height=45 bgcolor="343232" border=0>
+<td colspan=6 >
+
+
+<ul >
+  <li id="para1" style="margin-right:80px;"><a href="contact.html"><i>Contact Us </a></li></i>
+  <li id="para1" style="margin-right:80px;"><a href="sell.html"><i>Sell</a></li></i>
+   <li id="para1" style="margin-right:80px;"><a href="buy.html"><i>Buy</a></li></i>
+   <li id="para1" style="margin-right:80px;"><a href="design.html"><i>Design</a></li></i>
+    <li id="para1" style="margin-right:80px;"><a href="vehical.html"><i>Vehicle</a></li></i>
+  <li id="para1" style="margin-right:80px;"><a href= "home.html" ><i>Home</a></li></i>
+ 
+ 
+
+ 
+</ul>
+
+</td>
+</tr>
+
+<tr height=450 >
+
+<td colspan=6 style=" background-image:url(vehicle2.png); background-size: 1519px 450px;   ">
+<h1 style="font-size:40; color:black; text-align:right; font-family:compendiumLightSSi;padding-bottom:160px; 
+   padding-right:40px;">2022 Upcoming!<i><b></h1></i></b>
+</td>
+
+</tr>
+
+
+<tr height=100 bgcolor="#d5e1df">
+
+<td colspan=6 style="border-style: groove; border: 17px solid white; border-radius: 8px;">
+
+<p style="font-size:50px; color:black; text-align:center;" >Models of Mercedes-Benz: </p>
+
+
+</td>
+</tr>
+
+
+<tr height=1200 bgcolor="white" >
+<td colspan=6>
+<table border=1 height=600 cellspacing=0>
+
+
+
+
+
+
+<tr height=600>
+<td colspan=4>
+<table border=0 width=1510 cellspacing=0 height=600 bgcolor="white">
+<td width=379 style=" border-style: groove; border: 2px solid black; border-radius: 8px;">
+
+
+<img id="image" src="mercedes-maybach.png" > <br>
+
+<p style="font-size:20; padding-left:20px; " id="demo"><b></b></p>
+
+<p class="price" id="p1"><b></b>&nbsp;&nbsp;&nbsp;</p>
+
+<a href= "design.html" ><i> <button class="button" style="margin-left:150px"><b>OVERVIEW</button></b></a></li></i>
+<input type="checkbox" name="size" value="1901990"  onchange='addPrice(this);' style="margin-left:150px; margin-top:30px;  cursor: pointer;" >
+<label style="border: 1px solid; border-radius: 4px; box-shadow: 3px 4px #888888; padding:10px 10px 10px 10px;" ><b>Add to cart</b></label></p>
+<a href= "maybach.html" style="padding-left:150px"><i> <button class="but"><b>BUY</button></b></a></li></i></p>
+
+
+ </td>
+<td width=379 style=" border-style: groove; border: 2px solid black; border-radius: 8px;">
+<img id="image" src="cla.png" > <br>
+
+
+<p style="font-size:20; padding-left:20px; " id="demo1"><b></b></p>
+
+<p class="price" id="p2"><b></b>&nbsp;&nbsp;&nbsp;</p>
+
+<a href= "design.html" ><i> <button class="button" style="margin-left:150px"><b>OVERVIEW</button></b></a></li></i>
+<input type="checkbox" name="size" value="2246590"  onchange='addPrice(this);' style="margin-left:150px; margin-top:30px;  cursor: pointer;" >
+<label style="border: 1px solid; border-radius: 4px; box-shadow: 3px 4px #888888; padding:10px 10px 10px 10px;" ><b>Add to cart</b></label></p>
+<a href= "maybach.html" style="padding-left:150px"><i> <button class="but"><b>BUY</button></b></a></li></i></p>
+</td>
+
+<td width=379 style=" border-style: groove; border: 2px solid black; border-radius: 8px;">
+<img id="image" src="eqa.png" > <br>
+
+<p style="font-size:20; padding-left:20px; " id="demo2"><b></b></p>
+
+<p class="price" id="p3"><b></b>&nbsp;&nbsp;&nbsp;</p>
+
+<a href= "design.html" ><i> <button class="button" style="margin-left:150px"><b>OVERVIEW</button></b></a></li></i>
+<input type="checkbox" name="size" value="1801949"  onchange='addPrice(this);' style="margin-left:150px; margin-top:30px;  cursor: pointer;" >
+<label style="border: 1px solid; border-radius: 4px; box-shadow: 3px 4px #888888; padding:10px 10px 10px 10px;" ><b>Add to cart</b></label></p>
+<a href= "maybach.html" style="padding-left:150px"><i> <button class="but"><b>BUY</button></b></a></li></i></p>
+</td>
+
+<td width=379 style=" border-style: groove; border: 2px solid black; border-radius: 8px;">
+<img id="image" src="cls.png" > <br>
+
+<p style="font-size:20; padding-left:20px; " id="demo3"><b></b></p>
+
+<p class="price" id="p4"><b></b>&nbsp;&nbsp;&nbsp;</p>
+
+<a href= "design.html" ><i> <button class="button" style="margin-left:150px"><b>OVERVIEW</button></b></a></li></i>
+<input type="checkbox" name="size" value="1901990"  onchange='addPrice(this);' style="margin-left:150px; margin-top:30px;  cursor: pointer;" >
+<label style="border: 1px solid; border-radius: 4px; box-shadow: 3px 4px #888888; padding:10px 10px 10px 10px;" ><b>Add to cart</b></label></p>
+<a href= "maybach.html" style="padding-left:150px"><i> <button class="but"><b>BUY Directly</button></b></a></li></i></p>
+</td>
+</table>
+
+</td>
+</tr>
+
+
+<tr height=100 bgcolor="#d5e1df">
+
+<td colspan=6 style="border-style: groove; border: 17px solid white; border-radius: 8px;">
+
+<p style="font-size:50px; color:black; text-align:center;" >Models of Subaru: </p>
+
+
+</td>
+</tr>
+
+
+<tr height=1200 bgcolor="white" >
+<td colspan=6>
+<table border=1 height=600 cellspacing=0>
+
+
+
+
+
+
+<tr height=600>
+<td width=379 style=" border-style: groove; border: 2px solid black; border-radius: 8px;">
+
+
+<img id="image" src="g-class.png" > <br>
+
+<p style="font-size:20; padding-left:20px; " id="demo4"><b></b></p>
+
+<p class="price" id="p5"><b></b>&nbsp;&nbsp;&nbsp;</p>
+
+<a href= "design.html" ><i> <button class="button" style="margin-left:150px"><b>OVERVIEW</button></b></a></li></i>
+<input type="checkbox" name="size" value="2201990"  onchange='addPrice(this);' style="margin-left:150px; margin-top:30px;  cursor: pointer;" >
+<label style="border: 1px solid; border-radius: 4px; box-shadow: 3px 4px #888888;padding:10px 10px 10px 10px;" ><b>Add to cart</b></label></p>
+<a href= "maybach.html" style="padding-left:150px"><i> <button class="but"><b>BUY</button></b></a></li></i></p>
+
+
+ </td>
+ 
+ 
+<td width=379 style=" border-style: groove; border: 2px solid black; border-radius: 8px;">
+<img id="image" src="si.png" > <br>
+
+
+<p style="font-size:20; padding-left:20px; " id="demo5"><b></b></p>
+
+<p class="price" id="p6"><b></b>&nbsp;&nbsp;&nbsp;</p>
+
+<a href= "design.html" ><i> <button class="button" style="margin-left:150px"><b>OVERVIEW</button></b></a></li></i>
+<input type="checkbox" name="size" value="1501990"  onchange='addPrice(this);' style="margin-left:150px; margin-top:30px;  cursor: pointer;" >
+<label style="border: 1px solid; border-radius: 4px; box-shadow: 3px 4px #888888; padding:10px 10px 10px 10px;" ><b>Add to cart</b></label></p>
+<a href= "maybach.html" style="padding-left:150px"><i> <button class="but"><b>BUY</button></b></a></li></i></p>
+</td>
+
+
+
+<td width=379 style=" border-style: groove; border: 2px solid black; border-radius: 8px;">
+<img id="image" src="amg-gt.png" > <br>
+
+<p style="font-size:20; padding-left:20px; " id="demo6"><b></b></p>
+
+<p class="price" id="p7"><b></b>&nbsp;&nbsp;&nbsp;</p>
+
+<a href= "design.html" ><i> <button class="button" style="margin-left:150px"><b>OVERVIEW</button></b></a></li></i>
+<input type="checkbox" name="size" value="20"  onchange='addPrice(this);' style="margin-left:150px; margin-top:30px;  cursor: pointer;" >
+<label style="border: 1px solid; border-radius: 4px; box-shadow: 3px 4px #888888; padding:10px 10px 10px 10px;" ><b>Add to cart</b></label></p>
+<a href= "maybach.html" style="padding-left:150px"><i> <button class="but"><b>BUY</button></b></a></li></i></p>
+</td>
+
+
+
+<td width=379 style=" border-style: groove; border: 2px solid black; border-radius: 8px;">
+<img id="image" src="cls.png" > <br>
+
+<p style="font-size:20; padding-left:20px; " id="demo7"><b></b></p>
+
+<p class="price" id="p8"><b></b>&nbsp;&nbsp;&nbsp;</p>
+
+<a href= "design.html" ><i> <button class="button" style="margin-left:150px"><b>OVERVIEW</button></b></a></li></i>
+<input type="checkbox" name="size" value="20"  onchange='addPrice(this);' style="margin-left:150px; margin-top:30px;  cursor: pointer;" >
+<label style="border: 1px solid; border-radius: 4px; box-shadow: 3px 4px #888888; padding:10px 10px 10px 10px;" ><b>Add to cart</b></label></p>
+<a href= "maybach.html" style="padding-left:150px"><i> <button class="but"><b>BUY</button></b></a></li></i></p>
+
+
+</td>
+</tr>
+
+
+
+
+
+
+
+
+
+<tr border=1 height=100 width=1510 >
+<td colspan=4>
+<table border=0 width=1510 cellspacing=0 height=100 bgcolor="white">
+
+<td width="453" ></td>
+<td width="604" > <br><br>
+<label style="font-size:45;
+ padding:6px 6px 6px 16px; margin-left:180px;">Total Amount   </label> 
+<p style="font-size:25;  padding:6px 6px 6px 280px;  border:3px solid;" id="tp"> 0.00 tk</p><br><br></td>
+<td width="453" ></td>
+</table>
+</td>
+</tr>
+
+
+
+<tr height=300>
+
+<td colspan=4>
+<table border=0 width=1510 cellspacing=0 height=1000 bgcolor="white">
+<td width="260" ></td>
+<td width="986" style=" border:10px solid BABDBF; " bgcolor="BABDBF" >
+
+
+
+<form  action="insertion_billingform.php" method="post" onsubmit="return validate()" >
+<br><br><br><br>
+
+<font style=" margin-left:370px; font-size:30;" color=black><b>Fill up the form:</b></font><br><br>
+
+
+<input type="text" name="name1" id="name1" placeholder="Full Name"  maxlength=25 ><br>
+<label style=" margin-left:240px; font-size:19; color:red;">*Name length must be between 2 and 5*</label><br><br>
+<label style=" margin-left:230px; font-size:21;" ><b>Gender:</b></label ><br>
+<input  type="radio" name="gender" value="male"><label   style=" margin-left:12px;"><b>Male</b></label><br>
+
+<input type="radio" name="gender" value="female"> <label  style=" margin-left:9px;"><b>Female </b></label><br>
+
+<input   type="radio" name="gender" value="others"><label style=" margin-left:13px;"><b>Other </b></label> <br> 
+
+<input type="text" name="email" id="email" placeholder="Email" ><br>
+
+<input type="text" name="mobile" id="num" placeholder="Mobile Number" ><br>
+<label style=" margin-left:240px; font-size:19; color:red;">*Mobile Number must be of 11 digits*</label><br><br>
+
+<input type="text" name="address" id="address" placeholder="Address" ><br>
+
+
+<select  id="option" name="city"  size=1  style="width:250;">
+<option value="">Choose a city</option>
+<option value="dhaka">Dhaka
+<option value="Chittagong">Chittagong
+<option value="Sylhet">Sylhet
+</select><br>
+
+<input type="text" name="state" id="state" placeholder="State" style="width:150;"> 
+<input type="text" name="zip" id="zip" placeholder="Zip" style="width:100; margin-left:0;"><br>
+<label style=" margin-left:240px; font-size:19; color:red;">*Zip must be of 5 digits*</label><br>
+<br><br><br>
+
+<font style=" margin-left:200px; font-size:30;" color=black><b>Payment:</b></font><br>
+
+<br>
+<input type="text" name="cnumber" id="Cnumber"placeholder="Enter Card Number"><br>
+<label style=" margin-left:240px; font-size:19; color:red;">*Card number must be of 5 digits*</label><br>
+
+
+<input type="text" name="monthyear" id="monthyear" placeholder="MM/YEAR" style="width:150;"><br>
+<input type="text" name="cardholdername"  id="cardholdername" placeholder="Card Holder Name" ><br><br>
+
+<label style=" margin-left:240px; font-size:19;"><b>Accepted cards:</b></label><br><br>
+
+<img src="visa.png" width="40" height="30" style=" margin-left:240px; ">
+<img src="masterc.png" width="40" height="30" style=" margin-left:10px; ">
+<img src="american.png" width="40" height="30" style=" margin-left:10px; ">
+<img src="discover.png" width="40" height="30" style=" margin-left:10px; "><br>
+<img src="paypal.png" width="40" height="30" style=" margin-left:240px; ">
+<img src="payoneer.png" width="40" height="30" style=" margin-left:10px; ">
+
+
+<br><br>
+
+<a href= "buy.html" ><input type="submit" name="submit" value="Confirm Payment" class="but" style="margin-left:230px" ></a><br><br>
+
+
+
+ 
+
+</form>
+</td>
+
+
+
+<td width="260" ></td>
+
+</table>
+</td>
+
+
+
+
+
+
+</tr>
+
+
+
+
+
+
+
+
+
+
+</table>
+</td>
+</tr>
+
+
+
+
+
+
+
+
+
+
+</table>
+</body>
+</html>

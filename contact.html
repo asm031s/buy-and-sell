@@ -1,0 +1,363 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="styling.css">
+<style>
+body
+{ margin:0;
+}
+input[type=text], select {
+  width: 500px;
+  padding: 16px 20px ;
+  margin: 20px 0 30px 150px;
+  display: inline-block;
+  border: 7px solid #ccc;
+  border-radius: 4px;
+ 
+}
+
+input[type=submit] {
+  width: 500px;
+  background-color: #4682B4;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color:   #2a526f;
+}
+input[type=reset] {
+  width: 500px;
+  background-color: #4682B4;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0 0px 150px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type=reset]:hover {
+  background-color:  #2a526f;
+}
+p {
+margin-left:150px;
+margin-right:190px;
+
+}
+textarea {
+ border: 7px solid #ccc;
+  border-radius: 4px;
+ 
+
+}
+#para2{
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px #888888;
+}
+h1{color: white;
+text-align: center; font-size:30;}
+</style>
+</head>
+<script>
+function validate() {
+var a = 0, chk=document.getElementsByName("size")
+var total = 0;
+
+var txt = document.getElementById("fname");
+
+if(txt.value.length<=2||txt.value.length>10||txt.value== "" || txt.value== null ) {
+
+
+alert("Please enter first name to proceed");
+
+txt.style.border = "2px solid red";
+
+return false;
+
+} 
+var lname = document.getElementById("lname");
+
+if(lname.value.length<=2||lname.value.length>10||lname.value== "" || lname.value== null ) {
+
+
+alert("Please enter last name to proceed");
+
+lname.style.border = "2px solid red";
+
+return false;
+
+} 
+var num = document.getElementById("num")
+
+if( num.value == "" || isNaN( num.value ) || num.value.length != 11 ) {
+
+alert("Please enter your correct mobile number");
+num.style.border = "2px solid red";
+return false;
+
+}
+var eml = document.getElementById("email");
+
+if(eml.value== "" || eml.value== null ||eml.value.indexOf('@') <= 0 ||(eml.value.charAt(eml.value.length-4)!='.') && (eml.value.charAt(eml.value.length-3)!='.') ) {
+
+
+alert("Please enter email to proceed");
+
+eml.style.border = "2px solid red";
+
+return false;
+
+} 
+var comment = document.getElementById("comment");
+
+if(comment.value.length<=2||comment.value.length>10||comment.value== "" || comment.value== null ) {
+
+
+alert("Please enter comment to proceed");
+
+comment.style.border = "2px solid red";
+
+return false;
+
+} 
+for(i=0;i<chk.length;i++) {
+
+if(chk.item(i).checked == false) {
+
+a++;
+
+}
+
+}
+
+if(a == chk.length) {
+
+alert("Please select the term if you agree with our conditions.");
+
+return false;
+
+}
+return true;
+
+
+}
+</script>
+<body>
+
+<table border=0 width=1519 height=900 cellspacing=0 bgcolor="#586674 ">
+
+
+<tr height=60 bgcolor="343232">
+<td colspan=6 >
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<img src="logo4.png" width="80" height="80" style="margin-top:30px;"> 
+&nbsp;&nbsp;
+<font style="font-size:27"  color="white" ><i><b>Buyy & Sell </font></i></b></a>
+
+<ul >
+  <li id="para1"><a href="contact.html"><i>Contact Us </a></li></i>
+  <li id="para1"><a href="sell.html"><i>Sell</a></li></i>
+   <li id="para1"><a href="buy.html"><i>Buy</a></li></i>
+   <li id="para1"><a href="design.html"><i>Design</a></li></i>
+    <li id="para1"><a href="vehical.html"><i>Vehicle</a></li></i>
+  <li id="para1"><a href= "home.html" ><i>Home</a></li></i>
+ 
+ 
+
+ 
+</ul>
+
+</td>
+</tr>
+
+
+<tr height=300 >
+
+<td colspan=6><br><br>
+<p align=center><u><b><font face="courier" size="6" color="white" >Contact Us</font></b> </u><br><br>
+   <font face="courier" size="4" color="white" ><i><b>
+
+
+QAF Auto Sdn Bhd<br>
+QAF Centre Lot 66<br>
+Tapak Perindustrian Beribi<br>
+Bandar Seri Begawan BE1118<br>
+Chittagong,Bangladesh<br>
+Tel: (+673) 245 3377<br>
+Fax: (+673) 245 2151 <br>
+
+ We look forward to receiving your comments and will reply as soon as possible.
+  </font> </i></b> </p>
+<br><br>
+
+</td>
+
+</tr>
+
+
+
+
+<tr height=1000 >
+
+<td colspan=6 style=" border: 24px solid  #586674; border-radius: 4px;" bgcolor="#d5e1df">
+
+<form method="" action="" onsubmit="return validate()">
+
+
+<input type ="text" maxlength =30  placeholder="first name" name="firstname" id="fname" style=" margin-top: 90px;"> 
+
+<input type ="text" maxlength =30  placeholder="last name" name="lastname" id="lname" style="  margin-top: 90px;"><br>
+
+ <input type ="text"  placeholder="Mobile Number" id="num" name="Mobilenumber" >
+ 
+<input type ="text"  placeholder="Email" name="Email" id="email"><br>
+
+<font face="courier" size="4" color="black" style="margin-left:150px;"  > <b>Comments: </font></b> <br>
+
+<textarea name="name" rows=17 cols=90 style="margin-left:150px;" id="comment" placeholder="Comment" wrap>
+
+</textarea> <br><br>
+
+<p><b> <font face="courier" size="4" color="black" ><i><b>
+The official importer and distributor of Buyy & Sell in Chittagong,Bangladesh,<br>
+ would like to continue to keep you updated on Buyy & Sell activities such as launches of latest automobiles,<br> events/exhibitions, and exclusive Buyy & Sell promotions.<br> 
+Until we receive a request to cease future communications with you,<br> 
+please note that as an existing customer and/or as part of your on-going relationship with Buyy & Sell,<br> 
+we will continue to update you on the above-mentioned activities.
+  </font> </i></b> </p><br>
+
+
+<p>    
+<input type="checkbox" name="size" value="consent" style=" cursor: pointer;" id="size">
+<font face="courier" size="4" color="black"  > 
+ 
+<b>I have read the consent provisions relating to the collection, use, disclosure, retention, access,
+ management and transfer of my personal data in the above terms and conditions and unconditionally agree with them.
+</p>
+ </font></b> 
+<br>
+
+<br>
+<input type="reset" value="reset">
+<input type="submit" value="submit">
+
+</form>
+
+<tr height=200 >
+<td colspan=6>
+<table border=1 height=200 cellspacing=0 bgcolor=#292F33>
+<tr height=40>
+
+<td width=506> <center><br> <h1><i><font  style="font-size:24"  > Explore Cars </font></i></h1> </center></td>
+<td width=506> <center><br><h1><i> <font style="font-size:24"   > Shopping </font></i></h1></center> </td>
+<td width=506> <center><br><h1> <i><font style="font-size:24"  > Brand</font></i></h1></center></td>
+
+</tr>
+
+<tr height=200 bgcolor="#292F33">
+<td width=506> 
+<ul>
+<a href="#"><li style="color:white; font-size:21;margin-left: 10px;">Design </li></a>
+<a href="#"><li style="color:white;font-size:21;margin-left: 10px;"> Exhibitions </li></a>
+<a href="#"><li style="color:white;font-size:21;margin-left: 10px;"> Configurator </li></a>
+<a href="#"><li style="color:white;font-size:21;margin-left: 10px;"> About Brands </li></a>
+<a href="#"><li style="color:white;font-size:21;margin-left: 10px;"> About models </li></a>
+
+</ul>
+ </td>
+<td width=506>
+<ul>
+<a href="#"><li style="color:white;font-size:21;margin-left: 10px;"> Accessories </li></a>
+<a href="#"><li style="color:white;font-size:21;margin-left: 10px;"> Prices </li></a>
+<a href="#"><li style="color:white;font-size:21;margin-left: 10px;"> Classic store </li></a>
+<a href="#"><li style="color:white;font-size:21;margin-left: 10px;"> Service </li></a>
+<a href="#"><li style="color:white;font-size:21;margin-left: 10px;"> About Dealer </li></a>
+
+</ul>
+</td>
+<td width=506>
+<ul>
+<a href="https://www.subaru.com/"><li style="color:white;font-size:21;margin-left: 10px;"> Subaru </li></a>
+<a href="https://www.honda.com/"><li style="color:white;font-size:21;margin-left: 10px;"> Honda</li></a>
+<a href="https://www.mercedes-benz.com/en/"><li style="color:white;font-size:21;margin-left: 10px;">  Mercedes-Benz </li></a>
+<a href="https://www.bmw.com.bn/en/index.html?gclid=CjwKCAjwz_WGBhA1EiwAUAxIcXY2TVrTaxIYUlFmNxmf16AnYQMOZUVUxoQhmtkkC1kh8xrYQdfBFhoCdv4QAvD_BwE"><li style="color:white;margin-left: 10px;"> BMW </li></a>
+<a href="https://www.toyota.com/"><li style="color:white;font-size:21;margin-left: 10px;">  Toyota </li></a>
+
+</ul>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+
+
+<tr height=350 width="1519" bgcolor="black" >
+<td colspan=6 style="border-style: groove; border: 20px solid black; border-radius: 8px;">
+<br><br>
+<font align=center style="font-size:15"><h1 id="para2" ><i><b>Stay connected with Buyy & Sell.</h1></font></i></b><br>
+
+<br><br>
+<center>
+<a href="https://www.facebook.com/asma.mozaffar.5"><img src="fbb.png" width="40" height="40"></a>
+                
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<a href="https://www.instagram.com/asma_mozaffar/"><img src="insta.png" width="40" height="40"></a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+		<a href="https://twitter.com/"><img src="twitter.png" width="40" height="40"></a>
+	
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+		<a href="https://www.youtube.com/user/Subaru/videos"><img src="youtube.png" width="40" height="40"></a></center>
+		
+		<br><br>
+		<a href= "contact.html" style="padding-left:1370px; color:white; font-size:20;"><i>Back to top</a></li></i>
+<br><br>
+</td>
+</tr>
+
+
+
+
+</td>
+
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</table>
+</body>
+</html>

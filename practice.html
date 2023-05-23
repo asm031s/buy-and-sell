@@ -1,0 +1,565 @@
+<html>
+<head>
+<title> Buyy & Sell </title>
+<link rel="stylesheet" type="text/css" href="F:\New folder\styling.css">
+<SCRIPT TYPE="text/javascript">
+
+window.alert( "Welcome to BUYY & SEll!" );
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</SCRIPT>
+<style>
+body
+{ margin:0;}
+
+h1{color: white;
+text-align: center; font-size:30;}
+
+input[type=text] {
+  width: 900;
+
+  border: 10px solid black;
+  border-radius: 4px;
+  
+  background-color: white;
+
+ 
+  padding: 12px 20px 12px 40px;
+}
+
+
+
+.button {
+  
+  padding: 10px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+
+  color: black;
+  background-color: black;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+
+}
+
+.button:hover {background-color: gray}
+
+l1{
+
+font-size:20;}
+
+
+
+
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+
+
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+
+
+
+
+
+
+
+</style>
+</head>
+<body>
+
+<table border=0 width=1519 height=3060 cellspacing=0 bgcolor="black">
+
+
+<tr height=60 bgcolor="343232">
+<td colspan=6 >
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<img src="F:\New folder\logo4.png" width="80" height="80" style="margin-top:30px;"> 
+&nbsp;&nbsp;
+<font style="font-size:27"  color="white" ><i><b>Buyy & Sell </font></i></b></a>
+
+<ul >
+  <li id="para1"><a href="contact.html"><i>Contact Us </a></li></i>
+  <li id="para1"><a href="sell.html"><i>Sell</a></li></i>
+   <li id="para1"><a href="buy.html"><i>Buy</a></li></i>
+ <li onclick="myFunction()" id="para1" class="dropbtn"><a href="design.html"><i>Design</a></li></i>
+  <div id="myDropdown" class="dropdown-content" >
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <li id="para1"><a href="vehical.html"><i>Vehicle</a></li></i>
+  <li id="para1"><a href= "home.html" ><i>Home</a></li></i>
+ 
+ 
+
+ 
+</ul>
+
+</td>
+</tr>
+
+ 
+
+
+
+<tr height=700>
+<td colspan=6 style=" border: 12px solid black; border-radius: 8px;" >
+
+
+<img src="F:\New folder\buyy.png" width="1480" height="700" class="mySlides fade">
+<img src="F:\New folder\subaruCrosstrek.png" width="1480" height="700" class="mySlides fade" class="mySlides fade">
+
+<img src="F:\New folder\car.png" width="1480" height="700" class="mySlides fade">
+
+
+<img src="F:\New folder\2022-mercedes-benz-eqs-interior.png" width="1480" height="700" class="mySlides fade">
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+<span class="dot" style="text-align:center"></span> 
+  <span class="dot" style="text-align:center"></span> 
+  <span class="dot" style="text-align:center"></span> 
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</td>
+</tr>
+
+<tr height=200 bgcolor="#d5e1df">
+<td colspan=6 style=" border: 7px solid white;background-image:url(background.png);  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;">
+<br><p style="color:black; font-size:40; padding-left:100px;"><b>Welcome to the <br> Car Buyy & Sell international <br>website.</p>
+<p style="color:black; font-size:28; padding-left:100px;">
+<i>Exclusive reports and current films:<br> experience a broad range of topics from the fascinating <br> world of various Brand.</b></i>
+
+<br></p></br>
+
+                
+                     <center>
+<form>
+     <div class="container">
+
+            <label for="autocomplete"></label>
+	  <input id="country" type="text" name="search" placeholder="I am looking for..">
+
+                </center>
+</div>
+ 
+                <center>
+                    <br>
+                 <button class="button" style="color:white;font-size:16;"><b>Go!</button></b>
+                    </button>
+                </center> 
+</form>
+            <ul id="autocomplete-results"></ul>
+
+<script>
+var targetInput = document.getElementById('country'),
+    results = document.getElementById('autocomplete-results'),
+carList=['Aston Martin','Audi','BMW','Cadillac','Chevrolet','Datsun','Ferrari',' Fiat','Ford','Honda','Mazda','Mitsubishi','Nissan','Porsche',' Rolls-Royce','Toyota','Tesla','Volkswagen'],
+    matches = [],
+    resultsCursor = 0;
+
+// Focus the input
+targetInput.focus();
+
+// Add event listener for the input keydown
+targetInput.addEventListener('keydown', function(event) {
+    if (event.keyCode == '13') {
+        event.preventDefault();
+    }
+});
+
+// Add event listener for the input keyup
+targetInput.addEventListener('keyup', function(event) {
+    /*
+    * Key codes
+    *
+    * Enter: 13
+    * Arrow up: 38
+    * Arrow down: 40
+    */
+
+    results.innerHTML = '';
+    toggleResults('hide');
+
+    if (this.value.length > 0) {
+        matches = getMatches(this.value);
+
+        if (matches.length > 0) {
+            displayMatches(matches);
+        }
+    }
+
+    if (results.classList.contains('visible')) {
+        switch(event.keyCode) {
+            case 13:
+                targetInput.value = results.children[resultsCursor].innerHTML;
+                toggleResults('hide');
+                resultsCursor = 0;
+
+                break;
+            case 38:
+                if (resultsCursor > 0) {
+                    resultsCursor--;
+
+                    moveCursor(resultsCursor);
+                }
+
+                break;
+            case 40:
+                if (resultsCursor < (matches.length - 1)) {
+                    resultsCursor++;
+
+                    moveCursor(resultsCursor);
+                }
+
+                break;
+        }
+    }
+});
+
+// Define a function for checking if the input value matches any of the country names
+function getMatches(inputText) {
+    var matchList = [];
+
+    for (var i = 0; i < carList.length; i++) {
+        if (carList[i].toLowerCase().indexOf(inputText.toLowerCase()) != -1) {
+            matchList.push(carList[i]);
+        }
+    }
+
+    return matchList;
+}
+
+// Define a function for displaying autocomplete results
+function displayMatches(matchList) {
+    var j = 0;
+
+    while (j < matchList.length) {
+        results.innerHTML += '<li class="result">' + matchList[j] + '</li>';
+        j++;
+    }
+
+    // The first child gets a class of "highlighted"
+    moveCursor(resultsCursor);
+
+    // Show the results
+    toggleResults('show');
+}
+
+// Define a function for moving the cursor in the results list
+function moveCursor(pos) {
+    for (var x = 0; x < results.children.length; x++) {
+        results.children[x].classList.remove('highlighted');
+    }
+
+    results.children[pos].classList.add('highlighted');
+}
+
+// Define a function for toggling the results list
+function toggleResults(action) {
+    if (action == 'show') {
+        results.classList.add('visible');
+    } else if (action == 'hide') {
+        results.classList.remove('visible');
+    }
+}
+</script>
+<br><br>
+</td>
+</tr>
+
+<tr height=400 bgcolor="343232" >
+<td colspan=6>
+<table border=0 height=400 cellspacing=0>
+<tr height=120>
+<td width=749>
+<video width="749" height="300" controls loop controls autoplay>
+<source src="F:\New folder\mercedes.mp4" type="video/mp4">
+</video>
+ </td>
+<td width=749>
+<video width="749" height="300" controls loop controls autoplay>
+<source src="F:\New folder\bmw3.webm" type="video/webm">
+</video>
+</td>
+</tr>
+<tr height=120>
+<td width=749> 
+<video width="749" height="300" controls loop controls autoplay>
+<source src="F:\New folder\bmw2.webm" type="video/webm">
+</video>
+ </td>
+<td width=749>
+<video width="749" height="300" controls loop controls autoplay>
+<source src="F:\New folder\bmw.webm" type="video/webm">
+</video>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+
+<tr height=200 BGCOLOR="#d5e1df">
+<td colspan=6  style="border-style: groove; border: 17px solid white; border-radius: 8px;">
+<center>
+<p style="color: black; font-size:32;" ><i><b>Everybody in.</i></b><br></p>
+<p style="font-size:27; color:black;" ><i><b>Our Ultium Platform brings flexibility, power and range. We’re making Electric Vehicles for all.</p></b></i>
+</center>
+
+</td>
+</tr>
+
+
+
+<tr height=500 bgcolor="white">
+<td colspan=6>
+<table border=0 height=500 cellspacing=0>
+<tr height=250>
+<td rowspan=0 width=902><a href="design.html" ><img src="F:\New folder\temp.png" width="902" height="500"> </td></a>
+<td width=606><a href="design.html" ><img src="F:\New folder\temp5.png" width="606" height="250"> </td></a> 
+</tr>
+<tr height=250 >
+
+<td width=606> <a href="design.html" ><img src="F:\New folder\temp3.png" width="606" height="250"> </td></a>
+</tr>
+</table>
+</td>
+</tr>
+
+<tr height=220 width=1519 bgcolor="white">
+<td colspan=6>
+<table border=0 height=220 cellspacing=0>
+<tr height=220>
+<td width=379> <a href="design.html" ><img src="F:\New folder\temp4.png" width="373" height="220"> </td></a>
+<td width=379><a href="design.html" ><img src="F:\New folder\temp7.png" width="373" height="220"> </td></a>
+<td width=379><a href="design.html" ><img src="F:\New folder\temp6.png" width="373" height="220"> </td></a>
+<td width=379><a href="design.html" ><img src="F:\New folder\temp2.png" width="373" height="220"> </td></a>
+</tr>
+</table>
+</td>
+</tr>
+
+
+
+
+
+<tr height=200 >
+<td colspan=6>
+<table border=1 height=200 cellspacing=0 bgcolor=#292F33>
+<tr height=40>
+
+<td width=506> <center><br> <h1><i><font  style="font-size:24"  > Explore Cars </font></i></h1> </center></td>
+<td width=506> <center><br><h1><i> <font style="font-size:24"   > Shopping </font></i></h1></center> </td>
+<td width=506> <center><br><h1> <i><font style="font-size:24"  > Brand</font></i></h1></center></td>
+
+</tr>
+
+<tr height=200 bgcolor="#292F33">
+<td width=506> 
+<ul>
+<a  href="design.html" style="text-decoration:none; "><li  style="color:white; font-size:21;margin-left: 10px;">Design </li></a>
+<a  href="#" style="text-decoration:none; "><li style="color:white;font-size:21;margin-left: 10px;"> Exhibitions </li></a>
+<a  href="#" style="text-decoration:none; "><li style="color:white;font-size:21;margin-left: 10px;"> Configurator </li></a>
+<a  href="#" style="text-decoration:none; "><li style="color:white;font-size:21;margin-left: 10px;"> About Brands </li></a>
+<a  href="#" style="text-decoration:none; "><li style="color:white;font-size:21;margin-left: 10px;"> About models </li></a>
+
+</ul>
+ </td>
+<td width=506>
+<ul>
+<a  href="#" style="text-decoration:none; "><li style="color:white;font-size:21;margin-left: 10px;"> Accessories </li></a>
+<a  href="#" style="text-decoration:none; "><li style="color:white;font-size:21;margin-left: 10px;"> Prices </li></a>
+<a  href="#" style="text-decoration:none; "><li style="color:white;font-size:21;margin-left: 10px;"> Classic store </li></a>
+<a  href="#" style="text-decoration:none; " ><li style="color:white;font-size:21;margin-left: 10px;"> Service </li></a>
+<a  href="#" style="text-decoration:none; "><li style="color:white;font-size:21;margin-left: 10px;"> About Dealer </li></a>
+
+</ul>
+</td>
+<td width=506>
+<ul>
+<a href="https://www.subaru.com/" style="text-decoration:none; "><li style="color:white;font-size:21;margin-left: 10px;"> Subaru </li></a>
+<a   href="https://www.honda.com/" style="text-decoration:none; "><li style="color:white;font-size:21;margin-left: 10px;"> Honda</li></a>
+<a  href="https://www.mercedes-benz.com/en/" style="text-decoration:none; "><li style="color:white;font-size:21;margin-left: 10px;">  Mercedes-Benz </li></a>
+<a  href="https://www.bmw.com.bn/en/index.html?gclid=CjwKCAjwz_WGBhA1EiwAUAxIcXY2TVrTaxIYUlFmNxmf16AnYQMOZUVUxoQhmtkkC1kh8xrYQdfBFhoCdv4QAvD_BwE" 
+style="text-decoration:none; "><li style="color:white;margin-left: 10px;"> BMW </li></a>
+<a  href="https://www.toyota.com/" style="text-decoration:none; "><li style="color:white;font-size:21;margin-left: 10px;">  Toyota </li></a>
+
+</ul>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+
+
+
+<tr height=350 width="1519" bgcolor="black" >
+<td colspan=6 style=" border: 20px solid black; border-radius: 8px;">
+<br><br>
+<font align=center style="font-size:15"><h1 id="para2" ><i><b>Stay connected with Buyy & Sell.</h1></font></i></b><br>
+
+<br><br>
+<center>
+<a href="https://www.facebook.com/asma.mozaffar.5"><img src="F:\New folder\fbb.png" width="40" height="40"></a>
+                
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<a href="https://www.instagram.com/asma_mozaffar/"><img src="F:\New folder\insta.png" width="40" height="40"></a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+		<a href="https://twitter.com/"><img src="F:\New folder\twitter.png" width="40" height="40"></a>
+	
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+		<a href="https://www.youtube.com/user/Subaru/videos"><img src="F:\New folder\youtube.png" width="40" height="40"></a></center>
+		
+		<br><br>
+		<a href= "home.html" style="padding-left:1370px; color:white; font-size:20;"><i>Back to top</a></li></i>
+<br><br>
+</td>
+</tr>
+
+
+
+
+
+
+
+
+</table>
+
+</body>
+</html>
